@@ -17,10 +17,25 @@
 using namespace std;
 using namespace cv;
 
-    
-    class Cropper{
+/** Usage: suppose you want to crop an image img, which is
+ *  CV8UC3 mat, BGR color format. Call this class:
+ * 
+ *      Cropper cropper;
+ *      Mat cropped_image = cropper.crop(img);
+ * 
+ * Or like this:
+ *      Cropper cropper;
+ *      Mat cropped_image;
+ *      cv::Rect bound;
+ *      cropper.crop(img, cropped_image, bound);
+ * 
+ * Now #bound stores the bounding rectangle of the #cropped_image
+ * inside the original #img.
+ * **********************************************************/
+
+class Cropper{
     public:
-        int kstep = 10;
+    int kstep = 10;
         
     public:
         /** cropping the image to rid the blank part **/
