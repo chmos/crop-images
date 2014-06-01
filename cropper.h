@@ -75,6 +75,7 @@ class Cropper{
         bool lineHasContent(const Point2i& st, const Point2i& ed);
         
         void searchContentLine(Point2i& p1, Point2i& p2, Point2i& delta);
-    };
+        
+};
 
 
